@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GameServiceService } from './services/game-service.service';
 import { GameNavbarComponent } from './components/game-navbar/game-navbar.component';
 import { GameFooterComponent } from './components/game-footer/game-footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { GameFooterComponent } from './components/game-footer/game-footer.compon
      HttpClientModule
   ],
   providers: [GameServiceService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule]
 })
 export class AppModule { }

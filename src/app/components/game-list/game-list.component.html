@@ -3,7 +3,6 @@
 <div class="container">
   <h1 class="games-future">Games of the Future 🤩 🚀</h1>
 
-    <!-- Buscador y selects -->
     <div class="row search-bar">
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="input-group">
@@ -27,14 +26,13 @@
     </div>
 
   <div class="row">
-    <!-- Aquí irían las cards generadas con *ngFor u otro método según la lista de juegos -->
     <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let game of filteredGames">
-      <div class="card"  [routerLink]="['/game', game.id]">
+      <a class="card"  [routerLink]="['/game', game.id]">
         <div class="card-img" [style.background-image]="'url(' + game.thumbnail + ')'">
           <h5 class="card-title">{{ game.title }}</h5>
           <p class="card-text">{{ game.short_description }}</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
