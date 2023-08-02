@@ -18,4 +18,10 @@ describe('GameFooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display three buttons images', () => {
+    const buttonImgs = fixture.nativeElement.querySelectorAll('.button-img');
+    expect(buttonImgs.length).toBe(3);
+  });
+
 });
